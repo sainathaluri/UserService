@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: USER-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservices
+    username: root
+    password: Sainath@123
+  driver-class-name: com.mysql.jdbc.Driver
+  config:
+    import: optional:configserver:http://localhost:8085
+jpa:
+  hibernate:
+    ddl-auto: true
+    show-sql: true
+
